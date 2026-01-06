@@ -1,0 +1,15 @@
+# IDE
+.idea
+
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundle
+vendor/
+.bundle/
+
+# ai
+.serena/

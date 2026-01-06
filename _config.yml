@@ -1,0 +1,174 @@
+repository: toongri/toongri.github.io
+favicon: images/favicon.png
+
+version: 2
+
+name: 김준형
+title: Backend Engineer
+website_title: 📄
+website: https://velog.io/@toong03284/posts
+email_title: 📧
+email: toong03284@gmail.com
+phone_title: ☎️
+phone: 010-3959-5195
+
+darkmode: never
+
+github_username: toongri
+about_title: 소개
+about_profile_image: images/profile.jpeg
+about_content: | # this will include new lines to allow paragraphs
+  3년차 Go 백엔드 개발자로, 중고 의류 이커머스 도메인에서 상품 관리 및 물류 처리 시스템을 설계하고 구현해왔습니다. LLM 기반 메타데이터 추론 시스템을 개발하여 검수 처리량 5배 향상 및 월 1,600만원 운영 비용을 절감한 경험이 있습니다.
+  
+  비즈니스에 몰입해서 제품을 성장시키는 재미를 즐기며, 최근에는 Claude와 협업하며 퀄리티를 유지한 채 생산성을 높이는 워크플로우를 탐구하고 있습니다.
+
+content:
+  - title: 기술
+    layout: text
+    content: |
+      Go, Gin, GORM, Kafka, PostgreSQL, Ginkgo
+
+  - title: 경력
+    layout: list
+    content:
+      - layout: left
+        title: 마인이스
+        link: https://www.mineis.io/
+        sub_title: Backend Engineer
+        caption: 2024.05 ~ 2025.11
+        quote: >
+          여성 중고 패션 이커머스 서비스
+        description: |
+          - LLM 기반 상품 메타데이터 추론 시스템 개발로 1인당 상품 검수 처리량 200개 -> 1000개 증가
+          - 현장 주도 공정 조건 관리 시스템을 구축하여 조건 변경 리드타임 2주 → 즉시 단축
+          - 중고 의류 상품 도메인 REST API 설계 및 개발
+      - layout: left
+        title: 애즈위메이크
+        link: https://www.aswemake.com/
+        sub_title: Backend Engineer
+        caption: 2022.07 ~ 2023.06
+        quote: >
+          식자재마트 중개 이커머스 서비스
+        description: |
+          - DB 인덱스 최적화로 상품 조회 응답 시간 10초 -> 500ms 단축
+          - AWS SQS 기반 비동기 처리로 상품 엑셀 등록 응답 시간 3분 -> 30초 단축
+          - 식자재 마트 상품 관리 REST API 설계 및 개발
+
+  - title: 학력
+    layout: list
+    content:
+      - layout: left
+        title: 인하대학교
+        caption: 2013.03 ~ 2020.08
+        description: 컴퓨터공학과 학사
+
+  - title: 문제 해결
+    layout: list
+    content:
+      - layout: top-left
+        title: 상품 메타데이터 추론 시스템 개발
+        sub_title: 마인이스
+        caption: 2024.10 ~ 2024.11
+        skills: Go, Gin, Kafka, PostgreSQL
+        description: |
+          **문제 인식**
+          - 서비스 성장으로 위탁판매 요청량 1.5배 증가, 미처리 재고 4주치 이상 적채 발생
+          - 창고 용량 한계 도달 및 처리 지연에 대한 위탁 판매자 불만 문의 폭증
+
+          **문제 정의**
+          - 현장 방문 및 검수 프로세스 분석 결과, 브랜드/소재/카테고리/색상/스타일 판단 등 복합적 컨텍스트를 요구하는 고숙련 업무임을 확인
+          - 높은 숙련도 요구로 인해 신규 인력 온보딩이 어렵고, 퇴사 시 대체 불가능한 구조적 병목 존재
+          - 인력 충원이 아닌 숙련도 의존성 자체를 제거해야 하는 문제로 재정의
+
+          **주요 업무**
+          - 숙련자가 수행하던 메타데이터 판단을 대체하는 LLM 기반 자동 추론 시스템 단독 설계 및 구현
+          
+          **해결 전략**
+          - **추론 정확도 확보**
+            - 멀티모달 모델 5종 비교 테스트 후 GPT-4o 선택 (정확도 85%, 일관성 95%)
+            - 동적 few-shot 주입으로 정확도 향상
+            - 동의어/유사어 매핑 기반 후처리 정규화
+          - **검수 플로우와 추론의 독립성 확보**
+            - 추론 실패가 상품 등록에 영향 없도록 비동기 처리로 플로우 분리
+            - 메시지 유실 방지를 위한 Kafka 기반 메시지 큐 도입
+            - At-least-once 보장을 위한 Transactional Outbox Pattern 적용
+          - **장애 내성 확보**
+            - 일시적 API 불안정 대응을 위한 Exponential Backoff 기반 Retry
+            - 지속적 실패 시 연쇄 장애 방지를 위한 Circuit Breaker
+            - Primary 모델 실패 시 Gemini Flash → Mistral AI 순차 Fallback으로 가용성 확보
+            - LLM 호출 지연이 다른 기능에 전파되지 않도록 Bulkhead로 리소스 격리
+            - 최종 실패 시 DLQ 전송 + Slack 알림으로 수동 처리 대상 추적
+          
+          **기여 성과**
+            - 1인당 검수 처리량 200개 → 1,000개
+            - 미처리 재고 4주치 → 1주치로 감소
+            - 검수 인력 11명 → 3명 (월 인건비 약 1,600만원 절감)
+      - layout: top-left
+        title: 현장 주도 공정 조건 관리 시스템 구축
+        sub_title: 마인이스
+        caption: 2025.01 ~ 2025.02
+        skills: Go, Gin, Kafka, PostgreSQL
+        description: |
+          **문제 인식**
+          - 자사 상품 가품 판정으로 3배 배상 사건 발생
+          - 이후 브랜드별 정품 검증 등 공정 조건 변경 요청 급증
+            
+          **문제 정의**
+          - 4개 공정(행거 촬영, 테이블 촬영, 정품 검증, 추가 촬영)의 진입 조건이 코드에 하드코딩
+          - 조건 변경마다 배포 필요 (배포 주기 2주)로 비즈니스 요구 대응 지연
+            
+          **주요 업무**
+          - 사이드 프로젝트로 MVP 검증 후 정식 시스템으로 발전시킨 공정 라우팅 Rule Engine 단독 설계 및 구현
+            
+          **해결 전략**
+          - **MVP 검증: Firebase Remote Config 기반 빠른 가설 검증**
+            - 팀 내 기존 사용 스펙으로 추가 인프라 없이 즉시 적용
+            - 관리 화면 없이 서버 단독 구현으로 빠른 검증에 집중
+            - 10분 주기 polling 방식 선택 (실시간성 불필요, webhook 대비 구현 단순)
+            - polling 실패 시 기존 데이터 유지로 서비스 중단 방지
+            - 1개월 운영 결과 주 3-5회 변경 발생 → 본격 시스템화 필요성 확인
+          - **운영 시스템 전환: DB + 관리 화면 구축**
+            - 지속적 변경 빈도 확인으로 현장 담당자가 직접 관리할 수 있는 UI 필요성 대두
+            - Rule 테이블 설계 및 관리 API 개발
+            - 관리자 화면에서 브랜드/카테고리/가격 등 조건 기반 공정 진입 규칙 설정
+            - 현장 리더 교육 1시간 + 가이드 문서 제공으로 개발팀 의존성 완전 제거
+          - **JSON 기반 자체 Rule Engine 구현**
+            - Go 환경에서 사용 가능한 성숙한 Rule Engine 부재로 자체 구현
+            - "A 브랜드이면서 가격 50만원 이상" 같은 복합 조건 요구로 재귀적 AND/OR 조합 지원
+            - 공정별 독립 Rule + 우선순위 기반 라우팅으로 상품 상태에 따른 동적 공정 결정
+          - **비개발자 운영 환경의 안정성 확보**
+            - 현장 담당자의 잘못된 Rule 등록으로 공정이 깨지는 것을 방지
+            - Rule 등록/수정 시 JSON 구조 및 필드 타입 검증
+            - Preview API로 실제 상품 대상 Rule 적용 결과 사전 확인
+            - 형식 오류 시 등록 차단 및 명확한 에러 응답
+          
+          **성과**
+          - 공정 조건 변경 리드타임: 2주 이상 → 즉시 적용
+          - 개발팀 Rule 변경 요청: 주 2건 → 0건 (현장 담당자 자체 처리)
+
+# Footer
+footer_show_references: true
+# references_title: References on request (Override references text)
+
+# Build settings
+remote_theme: sproogen/resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+
+exclude: [
+  "Gemfile",
+  "Gemfile.lock",
+  "node_modules",
+  "vendor/bundle/",
+  "vendor/cache/",
+  "vendor/gems/",
+  "vendor/ruby/",
+  "lib/",
+  "scripts/",
+  "docker-compose.yml",
+]
