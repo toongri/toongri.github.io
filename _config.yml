@@ -26,7 +26,7 @@ content:
   - title: 기술
     layout: text
     content: |
-      Go, Gin, GORM, Kafka, PostgreSQL, Ginkgo
+      Go, Kotlin, Gin, Spring boot, GORM, Spring Data JPA, Kafka, PostgreSQL, Ginkgo, JUnit5
 
   - title: 경력
     layout: list
