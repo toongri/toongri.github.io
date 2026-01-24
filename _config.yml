@@ -6,7 +6,7 @@ version: 2
 name: 김준형
 title: Backend Engineer
 website_title: 📄
-website: https://velog.io/@toong03284/posts
+website: https://github.com/ghojeong
 email_title: 📧
 email: toong03284@gmail.com
 phone_title: ☎️
@@ -14,7 +14,7 @@ phone: 010-3959-5195
 
 darkmode: never
 
-github_username: toongri
+#github_username: toongri
 about_title: 소개
 about_profile_image: images/profile.jpeg
 about_content: | # this will include new lines to allow paragraphs
