@@ -24,9 +24,20 @@ about_content: | # this will include new lines to allow paragraphs
 
 content:
   - title: 기술
-    layout: text
-    content: |
-      Go, Kotlin, Gin, Spring boot, GORM, Spring Data JPA, Kafka, PostgreSQL, Ginkgo, JUnit5
+    layout: list
+    content:
+      - title: 언어
+        description: |
+          - Go, Kotlin
+      - title: 프레임워크
+        description: |
+          - Gin, GORM, Spring Boot, JPA, Spring Batch
+      - title: 인프라
+        description: |
+          - PostgreSQL, Kafka
+      - title: 테스트
+        description: |
+          - Ginkgo, JUnit5
 
   - title: 경력
     layout: list
