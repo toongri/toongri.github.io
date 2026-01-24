@@ -191,7 +191,7 @@ content:
         title: 선착순 쿠폰 동시성 이슈 긴급 대응
         sub_title: 애즈위메이크
         caption: 2022.10
-        skills: Spring Boot, PostgreSQL, CloudWatch
+        skills: Spring Boot, PostgreSQL
         description: |
           **문제 인식**
           - 큐마켓 한정 수량 쿠폰 프로모션 중 초과 발급 발생 (예산 초과 및 성과 측정 차질)
