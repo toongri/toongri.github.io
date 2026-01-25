@@ -81,7 +81,6 @@ content:
     layout: list
     content:
       - title: ai 에이전트 tool 활용 공유 스터디
-        sub_title: REST Docs로 인수테스트를 문서화
         caption: 2025.12 ~
         description: |
           - oh-my-opencode, oh-my-claudecode, ralph 등 AI 코딩 도구의 확장 구조 분석, 사용 및 구현
