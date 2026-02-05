@@ -39,6 +39,7 @@ content:
         description: |
           - LLM 기반 상품 메타데이터 추론 시스템 개발로 1인당 상품 검수 처리량 200개 -> 1000개 증가
           - 현장 주도 공정 조건 관리 시스템을 구축하여 조건 변경 리드타임 2주 → 즉시 단축
+          - 상품 리스트/상세 조회 API에 Redis 캐시 적용으로 피크 시간대 DB CPU 90% → 50% 절감
       - layout: left
         title: 애즈위메이크
         link: https://www.aswemake.com/
@@ -49,6 +50,7 @@ content:
         description: |
           - 좋아요 집계 테이블 도입 및 B-Tree 인덱스 적용으로 TPS 50 환경에서 상품 조회 p99 10초 → 500ms 단축
           - AWS SQS 기반 비동기 처리로 상품 엑셀 등록 응답 시간 3분 -> 30초 단축
+          - 결제 상태 동기화 스케줄러 도입으로 결제-주문 불일치 주 15건 → 0건
 
   - title: 문제 해결
     layout: list
