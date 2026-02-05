@@ -55,11 +55,9 @@ content:
     content:
       - layout: top-left
         title: 상품 메타데이터 추론 시스템 개발
-        sub_title: 마인이스
-        caption: 2024.10 ~ 2024.11
+        sub_title: 1인당 검수 처리량 5배 향상, 월 1,600만원 운영비 절감
+        caption: 마인이스 · 2024.10 ~ 2024.11
         skills: Go, Gin, Kafka, PostgreSQL
-        quote: >
-          1인당 검수 처리량 5배 향상, 월 1,600만원 운영비 절감
         description: |
           **문제 인식**
           - 서비스 성장으로 위탁판매 요청량 1.5배 증가, 미처리 재고 4주치 이상 적채 발생
@@ -95,11 +93,9 @@ content:
             - 검수 인력 11명 → 3명 (월 인건비 약 1,600만원 절감)
       - layout: top-left
         title: 현장 주도 공정 조건 관리 시스템 구축
-        sub_title: 마인이스
-        caption: 2025.01 ~ 2025.02
+        sub_title: 조건 변경 리드타임 2주 → 즉시, 개발팀 의존성 완전 제거
+        caption: 마인이스 · 2025.01 ~ 2025.02
         skills: Go, Gin, Kafka, PostgreSQL
-        quote: >
-          조건 변경 리드타임 2주 → 즉시, 개발팀 의존성 완전 제거
         description: |
           **문제 인식**
           - 자사 상품 가품 판정으로 3배 배상 사건 발생
@@ -139,11 +135,9 @@ content:
           - 개발팀 Rule 변경 요청: 주 2건 → 0건 (현장 담당자 자체 처리)
       - layout: top-left
         title: 선착순 쿠폰 동시성 이슈 긴급 대응
-        sub_title: 애즈위메이크
-        caption: 2022.10 ~ 2022.10
+        sub_title: 2시간 내 핫픽스 완료, 추가 인프라 없이 문제 해결
+        caption: 애즈위메이크 · 2022.10
         skills: Spring Boot, PostgreSQL
-        quote: >
-          2시간 내 핫픽스 완료, 추가 인프라 없이 문제 해결
         description: |
           **문제 인식**
           - 큐마켓 한정 수량 쿠폰 프로모션 중 초과 발급 발생 (예산 초과 및 성과 측정 차질)
