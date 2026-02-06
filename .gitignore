@@ -13,3 +13,10 @@ vendor/
 
 # ai
 .serena/
+.claude/
+.codex/
+.gemini/
+.omt/
+
+# OS
+.DS_Store
