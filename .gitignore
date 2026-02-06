@@ -18,5 +18,8 @@ vendor/
 .gemini/
 .omt/
 
+# Superset
+.superset/
+
 # OS
 .DS_Store
