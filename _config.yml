@@ -101,8 +101,8 @@ content:
         caption: 애즈위메이크 · 2023.01
         skills: Spring Boot, PostgreSQL
         description: |
-          - 상품 상세 조회 p99 10초, 좋아요 수를 매 요청마다 COUNT 집계하는 구조적 한계
-          - 집계 테이블 분리 및 복합 인덱스 추가로 읽기 부하 제거
+          - 상품 리스트 조회 p99 10초, 좋아요 수를 매 요청마다 COUNT 집계하는 구조적 한계
+          - EXPLAIN ANALYZE에서 JOIN + SUM 연산의 시간·메모리 과다 사용 확인, 집계 테이블 분리 + 복합 인덱스로 읽기 부하 제거
           - p99 **10초 → 500ms** 단축, 가입자 상품 상세 조회 CTR **10% → 22%** 개선
       - layout: top-left
         title: 선착순 쿠폰 동시성 이슈 대응
