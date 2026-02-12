@@ -97,15 +97,15 @@ content:
           - 기술적 완성도가 곧 정답이라 생각했지만, 지표 중심 팀에서 임팩트·리소스·유지보수 비용을 함께 저울질하는 시야가 생겼습니다. 동시에 현재에 안주하지 않고, 개선 가능성을 검증해 팀에 선택지를 제공하는 습관도 이때 자리 잡았습니다.
 
       - layout: top-left
-        title: 좋아요 집계 최적화 — 상품 조회 성능 개선
-        caption: 애즈위메이크 · 2023
+        title: 좋아요 집계 최적화
+        caption: 애즈위메이크 · 2023.01
         skills: Spring Boot, PostgreSQL
         description: |
           - 상품 상세 조회 p99 10초, 좋아요 수를 매 요청마다 COUNT 집계하는 구조적 한계
           - 집계 테이블 분리 및 복합 인덱스 추가로 읽기 부하 제거
           - p99 **10초 → 500ms** 단축, 가입자 상품 상세 조회 CTR **10% → 22%** 개선
       - layout: top-left
-        title: 선착순 쿠폰 — 동시성 이슈 긴급 대응
+        title: 선착순 쿠폰 동시성 이슈 대응
         caption: 애즈위메이크 · 2022.10
         skills: Spring Boot, PostgreSQL
         description: |
@@ -114,8 +114,8 @@ content:
           - k6 200 VU 부하 테스트로 동시 요청 시나리오 검증 (p95 1초 이내)
           - **2시간** 내 핫픽스 완료, 2차 이벤트 초과 발급 **0건**
       - layout: top-left
-        title: 상품 조회 — SLO 미달 해소
-        caption: 마인이스 · 2024
+        title: 상품 조회 캐시 적용
+        caption: 마인이스 · 2025.04
         skills: Go, Redis, PostgreSQL
         description: |
           - 피크 시간대 상품 조회 p95 500ms로 SLO 미달, 반복 조회 상품의 캐시 부재가 원인
