@@ -101,17 +101,17 @@ content:
         caption: 마인이스 · 2025.04
         skills: Go, Redis, PostgreSQL
         description: |
-          - 피크 시간대 상품 조회 p95 500ms로 SLO 미달
+          - 피크 시간대 상품 조회 p95 latency 500ms로 SLO 미달
           - 읽기 비율이 높은 상품 데이터가 캐시 없이 매 요청 DB 조회되는 구조, Redis 캐시 적용으로 DB 부하 제거
-          - p95 **500ms → 150ms** 달성, DB 부하 **50%** 감소
+          - p95 latency **500ms → 150ms** 달성, DB 부하 **50%** 감소
       - layout: top-left
         title: 좋아요 집계 최적화
         caption: 애즈위메이크 · 2023.01
         skills: Spring Boot, PostgreSQL
         description: |
-          - 상품 리스트 조회 p99 10초, 좋아요 수를 매 요청마다 COUNT 집계하는 구조적 한계
+          - 상품 리스트 조회 p99 latency 10초, 좋아요 수를 매 요청마다 COUNT 집계하는 구조적 한계
           - EXPLAIN ANALYZE에서 JOIN + SUM 연산의 시간·메모리 과다 사용 확인, 집계 테이블 분리 + 복합 인덱스로 읽기 부하 제거
-          - p99 **10초 → 500ms** 단축, 가입자 상품 상세 조회 CTR **10% → 22%** 개선
+          - p99 latency **10초 → 500ms** 단축, 가입자 상품 상세 조회 CTR **10% → 22%** 개선
       - layout: top-left
         title: 선착순 쿠폰 동시성 이슈 대응
         caption: 애즈위메이크 · 2022.10
