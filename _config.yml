@@ -38,6 +38,7 @@ content:
           - LLM 기반 상품 메타데이터 추론 시스템 개발로 **월 1,600만원** 운영비 절감
           - 현장 주도 공정 조건 관리 시스템을 구축하여 조건 변경 리드타임 **2주 → 즉시** 단축
           - Redis 캐시 적용으로 피크 시간대 상품 조회 SLO 미달 해소 (P95 **500ms → 150ms**) 및 DB 부하 **50%** 감소
+          - 테스트 부재 환경에서 유닛 테스트 도입 주도, 커버리지 **0% → 20%** 및 주간 버그 리포트 **10건 → 7건** 감소
       - layout: left
         title: 애즈위메이크
         link: https://www.aswemake.com/
@@ -179,6 +180,9 @@ content:
       - title: 테스트
         description: |
           - Ginkgo, JUnit5
+      - title: 도구
+        description: |
+          - Claude Code, IntelliJ IDEA, k6
 
   - title: 학력
     layout: list
