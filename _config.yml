@@ -97,6 +97,14 @@ content:
           - 기술적 완성도가 곧 정답이라 생각했지만, 지표 중심 팀에서 임팩트·리소스·유지보수 비용을 함께 저울질하는 시야가 생겼습니다. 동시에 현재에 안주하지 않고, 개선 가능성을 검증해 팀에 선택지를 제공하는 습관도 이때 자리 잡았습니다.
 
       - layout: top-left
+        title: 상품 조회 캐시 적용
+        caption: 마인이스 · 2025.04
+        skills: Go, Redis, PostgreSQL
+        description: |
+          - 피크 시간대 상품 조회 p95 500ms로 SLO 미달
+          - 읽기 비율이 높은 상품 데이터가 캐시 없이 매 요청 DB 조회되는 구조, Redis 캐시 적용으로 DB 부하 제거
+          - p95 **500ms → 150ms** 달성, DB 부하 **50%** 감소
+      - layout: top-left
         title: 좋아요 집계 최적화
         caption: 애즈위메이크 · 2023.01
         skills: Spring Boot, PostgreSQL
@@ -113,14 +121,6 @@ content:
           - 재고 조회-차감 사이 race condition 확인, `UPDATE ... WHERE stock > 0` 원자적 갱신으로 추가 인프라 없이 해결
           - k6 200 VU 부하 테스트로 동시 요청 시나리오 검증 (p95 1초 이내)
           - **2시간** 내 핫픽스 완료, 2차 이벤트 초과 발급 **0건**
-      - layout: top-left
-        title: 상품 조회 캐시 적용
-        caption: 마인이스 · 2025.04
-        skills: Go, Redis, PostgreSQL
-        description: |
-          - 피크 시간대 상품 조회 p95 500ms로 SLO 미달, 반복 조회 상품의 캐시 부재가 원인
-          - Redis 캐시 적용으로 DB 직접 조회 부하 제거
-          - p95 **500ms → 150ms** 달성, DB 부하 **50%** 감소
 
   - title: 기술
     layout: list
