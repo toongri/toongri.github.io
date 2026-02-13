@@ -175,7 +175,7 @@ content:
           - 객체지향 원칙을 도메인 모델과 인프라 계층에 적용하여 확장에 용이한 구조로 개발
 
 # Footer
-footer_show_references: true
+footer_show_references: false
 # references_title: References on request (Override references text)
 
 # Build settings
