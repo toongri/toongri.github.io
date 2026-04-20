@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+{%- include head.html -%}
+<body>
+<section class="resume" id="resume-content">
+    {%- include header.html -%}
+    {%- include about.html -%}
+
+    {% for section in site.content %}
+    {% if section.title == "경력" %}
+      {% assign section_id = "experience" %}
+    {% elsif section.title == "문제 해결" %}
+      {% assign section_id = "projects" %}
+    {% elsif section.title == "기술" %}
+      {% assign section_id = "skills" %}
+    {% elsif section.title == "스터디 활동" %}
+      {% assign section_id = "activities" %}
+    {% elsif section.title == "학력" %}
+      {% assign section_id = "education" %}
+    {% else %}
+      {% assign section_id = section.title | slugify %}
+    {% endif %}
+
+    <section id="{{ section_id }}">
+        <h3 class="section-title">{{ section.title }}</h3>
+        {% if section.title == "문제 해결" %}
+            {% include section-projects.html content=section.content %}
+        {% elsif section.layout == "text" %}
+            {% include section-text.html content=section.content %}
+        {% else %}
+            {% include section-list.html content=section.content %}
+        {% endif %}
+    </section>
+    {% endfor %}
+</section>
+
+{%- include footer.html -%}
+</body>
+</html>

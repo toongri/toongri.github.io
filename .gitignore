@@ -1,0 +1,33 @@
+# IDE
+.idea
+
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundle
+vendor/
+.bundle/
+
+# ai
+.serena/
+.claude/
+.codex/
+.gemini/
+.omt/
+
+# Superset
+.superset/
+
+# OS
+.DS_Store
+
+# Node / Bun
+node_modules/
+dist/
+bun.lock
+
+# Generated files
+resume.pdf

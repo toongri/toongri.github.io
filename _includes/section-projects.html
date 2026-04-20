@@ -1,0 +1,21 @@
+{% for item in include.content %}
+<article class="project-card keep-together">
+    <div class="project-head">
+        <h4 class="project-title">{{ item.title }}</h4>
+        <div class="project-side-info">
+            <p class="project-side-meta">{{ item.caption }}</p>
+        </div>
+    </div>
+    {%- if item.sub_title -%}
+    <p class="project-meta-line project-subtitle-line">
+        <span class="project-subtitle">{{ item.sub_title }}</span>
+    </p>
+    {%- endif -%}
+    {%- if item.skills -%}
+    <p class="project-stack-line">{{ item.skills }}</p>
+    {%- endif -%}
+    <div class="project-content">
+        {{ item.description | strip | markdownify }}
+    </div>
+</article>
+{% endfor %}

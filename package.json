@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "scripts": {
+    "pdf": "bun run scripts/generate-resume-pdf.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0"
+  }
+}

@@ -1,0 +1,19 @@
+{% for item in include.content %}
+<div class="layout keep-together">
+    <div class="details">
+        <h4>{{ item.title }}</h4>
+        {%- if item.caption -%}
+        <p class="meta-period">{{ item.caption }}</p>
+        {%- endif -%}
+        {%- if item.sub_title -%}
+        <p><b>{{ item.sub_title }}</b></p>
+        {%- endif -%}
+        {%- if item.quote -%}
+        <p class="experience-quote">{{ item.quote }}</p>
+        {%- endif -%}
+    </div>
+    <div class="content">
+        {{ item.description | strip | markdownify }}
+    </div>
+</div>
+{% endfor %}

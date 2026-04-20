@@ -1,0 +1,21 @@
+<header class="resume-header">
+    <div class="header-left">
+        <div class="header-text">
+            <div class="header-name-line">
+                <h1>{{ site.name | escape }}</h1>
+                <p class="character-line">{{ site.title | escape }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="header-right">
+        {%- if site.email -%}
+        <p>{% if site.email_title %}{{ site.email_title | escape }} {% endif %}{{ site.email | escape }}</p>
+        {%- endif -%}
+        {%- if site.phone -%}
+        <p>{% if site.phone_title %}{{ site.phone_title | escape }} {% endif %}{{ site.phone | escape }}</p>
+        {%- endif -%}
+        {%- for item in site.website -%}
+        <p>{% if item.title %}{{ item.title | escape }} {% endif %}<a href="{{ item.content | escape }}" target="_blank" rel="noopener noreferrer">{{ item.content | escape }}</a></p>
+        {%- endfor -%}
+    </div>
+</header>
