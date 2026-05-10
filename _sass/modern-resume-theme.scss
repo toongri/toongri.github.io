@@ -83,6 +83,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.45rem;
+    break-after: avoid;
+    page-break-after: avoid;
 }
 
 .resume h3.section-title::before,
@@ -132,6 +134,12 @@ body {
 
 .resume ul {
     padding-left: 1.2rem;
+}
+
+.resume ul ul {
+    list-style-type: circle;
+    padding-left: 1.5em;
+    margin: 0.15rem 0 0.1rem;
 }
 
 .resume mark {
@@ -243,6 +251,8 @@ body {
     min-width: 0;
     overflow-wrap: anywhere;
     word-break: normal;
+    orphans: 3;
+    widows: 3;
 }
 
 /* ========== 경력 섹션 ========== */
@@ -291,6 +301,20 @@ body {
     position: absolute;
     left: -1.1em;
     color: #6b7280;
+}
+
+#experience .content ul ul {
+    margin: 0.15rem 0 0.1rem;
+    padding-left: 1.5em;
+}
+
+#experience .content ul ul li {
+    font-size: 0.82rem;
+}
+
+#experience .content ul ul li::before {
+    content: '◦';
+    transform: scale(0.7);
 }
 
 .experience-quote {
@@ -394,6 +418,8 @@ body {
     font-size: 0.9rem;
     line-height: 1.52;
     color: #24292e;
+    orphans: 3;
+    widows: 3;
 }
 
 #projects .project-content p {
@@ -409,6 +435,38 @@ body {
 #projects .project-content li {
     margin-bottom: 0.25rem;
     line-height: 1.35;
+}
+
+#projects .project-content ul ul {
+    margin: 0.15rem 0 0.1rem;
+    padding-left: 1.5em;
+    list-style-type: none;
+}
+
+#projects .project-content ul ul li {
+    font-size: 0.82rem;
+    position: relative;
+    padding-left: 0.2em;
+}
+
+#projects .project-content ul ul li::before {
+    content: '◦';
+    position: absolute;
+    left: -1.1em;
+    color: #6b7280;
+    transform: scale(0.7);
+}
+
+#projects .project-content ul + p {
+    margin-top: 0.7rem;
+}
+
+#projects .project-content ul ul li {
+    color: #374151;
+}
+
+#projects .project-content > ul > li + li {
+    margin-top: 0.45rem;
 }
 
 #projects .project-content p strong {
